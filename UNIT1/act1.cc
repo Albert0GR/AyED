@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-#define length 4
+#define length 5
 
 int arr[length];
 int pot[length];
@@ -12,9 +12,9 @@ void mostrar(int tam, int *n);
 int main(){
     
     leerDatos();
-    potenciaArreglo(4,arr,pot);
+    potenciaArreglo(5,arr,pot);
     printf("Resultado potencias\n");
-    mostrar(4,arr);
+    mostrar(5,arr);
     
 }
 void leerDatos(){
