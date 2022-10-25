@@ -29,7 +29,7 @@ void leerDatos(){
     for (int i = 0; i < length; i++)
     {
         printf("ingresa la potencia para el numero [%d]",i);
-        scanf("%d",&pot[i]);
+        scanf("%d",&pot[i]); 
     }
     
     
