@@ -3,12 +3,13 @@
 void f(char *apx, int n);
 int main(){
     char x[]={'a','b','c','d'};
-    char apx = *x;
+    char *apx;
+    apx=x;
     int n;
 
     printf("introduce un numeo entre 0 y 3:\n");
     scanf("%d",&n);
-    f(x,n);
+    f(apx,n);
 
     return 0;
 }
