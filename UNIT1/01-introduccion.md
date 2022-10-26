@@ -33,6 +33,7 @@ int main(){
 }
 
 ```
+![image](/UNIT1/images/imgp2.png)
 
 ---
 ## 3.INICIALIZAR APUNTADORES
@@ -69,6 +70,7 @@ int main(){
 
 }
 ```
+![image](/UNIT1/images/imgp3.png)
 
 ---
 ## 4.PASO POR VALOR Y POR REFERENCIA
