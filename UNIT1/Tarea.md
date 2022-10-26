@@ -158,3 +158,46 @@ void mostrar(int tam, int *n){                          // recibe la referencia 
 }
 
 ```
+
+## Tarea 1 Ejercicio 2: 
+>   
+
+### Código:
+
+```c
+#include <stdio.h>
+
+void f(char *apx, int n);
+int main(){
+    char x[]={'a','b','c','d'};
+    char *apx;
+    apx=x;
+    int n;
+
+    printf("introduce un numeo entre 0 y 3:\n");
+    scanf("%d",&n);
+    f(apx,n);
+
+    return 0;
+}
+
+void f(char *apx, int n){
+    printf("%c\n",*(apx+n));
+}
+
+```
+
+
+
+|error   |correccion   |   
+|---|---|
+| code  |void f(char *apx, int n); | 
+|   |   |  
+|   |   | 
+
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
