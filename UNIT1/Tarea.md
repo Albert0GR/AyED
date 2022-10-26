@@ -62,6 +62,9 @@ void mostrar(int tam, int *n){
 }
 
 ```
+### Resultado de ejecucion:
+
+![image](/UNIT1/images/imgt1.png)
 
 ### Descripcion del codigo:
 
@@ -160,7 +163,7 @@ void mostrar(int tam, int *n){                          // recibe la referencia 
 ```
 
 ## Tarea 1 Ejercicio 2: 
->   
+
 
 ### Código:
 
@@ -170,8 +173,7 @@ void mostrar(int tam, int *n){                          // recibe la referencia 
 void f(char *apx, int n);
 int main(){
     char x[]={'a','b','c','d'};
-    char *apx;
-    apx=x;
+    char *apx=x; 
     int n;
 
     printf("introduce un numeo entre 0 y 3:\n");
@@ -186,18 +188,36 @@ void f(char *apx, int n){
 }
 
 ```
+### Resultado de ejecucion:
 
+![image](/UNIT1/images/imgt2.png)
 
+> Modificaciones al codigo:
 
-|error   |correccion   |   
+En la correccion se realiza la declaracion de apx como tipo apuntador a **char**
+
+|Error   |Correccion   |   
 |---|---|
-| code  |void f(char *apx, int n); | 
-|   |   |  
-|   |   | 
+| char apx=x;  | char *apx=x;  | 
+
+---
+Se requiere guardar el valor entero ingresado por el usuario por lo que el operador correcto es: **&**
+
+|Error   |Correccion   |   
+|---|---|
+| `scanf("%d",*n);` | ``scanf("%d",&n);``  | 
+
+---
+En la correccion se modifica el tipo de dato que recibe la funcion **f**, al ser un aputador se debe usar el operador:  **_*_** en el caso de pasar el parametro por referencia.
+
+|Error   |Correccion   |   
+|---|---|
+| void f(char apx, int n){ | void f(char *apx, int n){  | 
 
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+## Tarea 1 Ejercicio 3:
+
+
+
+
+
