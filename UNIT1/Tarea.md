@@ -198,7 +198,7 @@ En la correccion se realiza la declaracion de apx como tipo apuntador a **char**
 
 |Error   |Correccion   |   
 |---|---|
-| char apx=x;  | char *apx=x;  | 
+| ``char apx=x; `` | ``char *apx=x; `` | 
 
 ---
 Se requiere guardar el valor entero ingresado por el usuario por lo que el operador correcto es: **&**
@@ -212,12 +212,109 @@ En la correccion se modifica el tipo de dato que recibe la funcion **f**, al ser
 
 |Error   |Correccion   |   
 |---|---|
-| void f(char apx, int n){ | void f(char *apx, int n){  | 
+| ``void f(char apx, int n){`` | ``void f(char *apx, int n){ `` | 
 
 
 ## Tarea 1 Ejercicio 3:
 
+### Diferentes formas de acceder a los elementos de un arreglo:
+
+> Apuntando a la direccion especifica de un elemento en un arreglo:
+
+```c
+#include<stdio.h>
+/*
+ Este programa accede a las localidades de memoria del arreglo  a
+través de un apuntador.
+*/
+int main () {
+ int c[10] = {5, 4, 3, 2, 1, 9, 8, 7, 6, 0};
+ int *apEnt;
+ 
+
+ printf(" c[10] = {5, 4, 3, 2, 1, 9, 8, 7, 6, 0}\n");
+
+ apEnt = &c[0];
+ printf("apEnt = &c[0] \t-> apEnt = %i\n", *apEnt);
+ apEnt = &c[1];
+ printf("apEnt = &c[1] \t-> apEnt = %i\n", *apEnt);
+
+ return 34;
+}
+```
+![image](/UNIT1/images/imgt3_1.png)
+---
+
+> Usando aritmetica de apuntadores:
+
+```c
+#include <stdio.h>
+
+int main () {
+ int arr [] = {5, 4, 3, 2, 1};
+ int *apArr;
+ apArr = arr;
+
+ printf("int arr [] = {5, 4, 3, 2, 1};\n");
+ printf("apArr = &arr[0]\n");
+
+ int x = *apArr;
+ printf("x = *apArr \t -> x = %d\n", x);
+
+ x = *(apArr+1);
+ printf("x = *(apArr+1) \t -> x = %d\n", x);
+
+ x = *(apArr+2);
+ printf("x = *(apArr+1) \t -> x = %d\n", x);
+
+ return 0;
+}
+
+```
+
+![image](/UNIT1/images/imgt3_2.png)
+---
 
 
+> A traves de un apuntador usando un ciclo for:
+```c
+#include <stdio.h>
 
+int main (){
+ #define TAMANO 5
+ int lista [TAMANO] = {10, 8, 5, 8, 7};
+ int *ap = lista;
 
+ printf("\tLista\n");
+ for (int indice = 0 ; indice < 5 ; indice++){
+ printf("\nCalificación del alumno %d es %d", indice+1, *(ap+indice));
+ }
+
+ printf("\n");
+
+ return 0;
+}
+```
+![image](/UNIT1/images/imgt3_3.png)
+---
+
+> A traves de un indice  usando un ciclo for:
+```c
+#include <stdio.h>
+
+int main (){
+ #define TAMANO 5
+ int lista [TAMANO] = {10, 8, 5, 8, 7};
+ 
+  printf("\tLista\n");
+ for (int indice = 0 ; indice < 5 ; indice++){
+ printf("\nCalificación del alumno %d es %d", indice+1,lista[indice]);
+ }
+
+ printf("\n");
+
+ return 0;
+}
+```
+![image](/UNIT1/images/imgt3_3.png)
+---
