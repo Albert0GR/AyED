@@ -64,7 +64,7 @@ void mostrar(int tam, int *n){
 ```
 ### Resultado de ejecucion:
 
-![image](/UNIT1/images/imgt1.png)
+![image](images/imgt1.png)
 
 ### Descripcion del codigo:
 
@@ -190,7 +190,7 @@ void f(char *apx, int n){
 ```
 ### Resultado de ejecucion:
 
-![image](/UNIT1/images/imgt2.png)
+![image](images/imgt2.png)
 
 > Modificaciones al codigo:
 
@@ -242,7 +242,7 @@ int main () {
  return 34;
 }
 ```
-![image](/UNIT1/images/imgt3_1.png)
+![image](images/imgt3_1.png)
 ---
 
 > Usando aritmetica de apuntadores:
@@ -272,7 +272,7 @@ int main () {
 
 ```
 
-![image](/UNIT1/images/imgt3_2.png)
+![image](images/imgt3_2.png)
 ---
 
 
@@ -295,7 +295,7 @@ int main (){
  return 0;
 }
 ```
-![image](/UNIT1/images/imgt3_3.png)
+![image](images/imgt3_3.png)
 ---
 
 > A traves de un indice  usando un ciclo for:
@@ -316,5 +316,5 @@ int main (){
  return 0;
 }
 ```
-![image](/UNIT1/images/imgt3_3.png)
+![image](images/imgt3_3.png)
 ---
