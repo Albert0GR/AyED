@@ -1,40 +1,28 @@
-/*nodo.cc
-creacion y definiciona de la funcion para insertar un nodo en la lista
-*/
-#include<stdio.h>
-#include<stdlib.h>
-
-typedef struct Molde
-{
-    int dato;
-    struct Molde *siguiente;
-    /* data */
+#include <stdio.h>
+#include <stdlib.h>
+ 
+typedef struct Molde{
+int dato;
+struct Molde *siguiente;
 }Nodo;
-
-//variable que apunta al inicio del conjunto de nodos 
-
-Nodo *inicio =NULL;
-
-void insertar(int x){
-    Nodo *nuevo;
-
-    nuevo = malloc(sizeof(Nodo));
-    nuevo -> dato=x;
-
-    if (inicio==NULL)
-    {
-        inicio=nuevo;
-        nuevo->siguiente = NULL;
-    }else{
-        nuevo->siguiente =inicio;
-        inicio = nuevo;
-    }
+ 
+int main (){
+    //nodo nuevo junto con malloc ahora no chilla ya que devuelve es un puntero a void, pues lo guardamos en un puntero de tipo void como debe de ser =D
+    void* Nuevo = malloc( sizeof(Nodo) ); 
     
-}
-
-int main(){
-    insertar(4);
-    printf("dato en inicio (lls):%d",inicio->dato);
-
+    Molde* pMolde;  // <- ¿Pero quieres guardarlo aquí no? XD
+    
+    //¡solución! Cast de nuevo nodo que es del tipo void* a pNodo que es un puntero a nodo*. =DD
+    pMolde = ( Molde* ) Nuevo; 
+    
+    //ahora pNodo ya guarda la dirección de lo que tu quieres. Es más o menos lo que 
+    //hace nodoNuevo = (pNodo)malloc(sizeof(Nodo)); tal como te lo dijo dehm
+    pMolde->dato = 10;
+    
+    
+    printf("%d\n",pMolde->dato );
+    
+    free(Nuevo);
+    getchar();
     return 0;
 }
