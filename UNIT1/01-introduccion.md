@@ -35,7 +35,25 @@ int main(){
 ```
 ![image](/UNIT1/images/imgp2.png)
 
+
+
+## 2.1 EQUIVALENCIA DE APUNTADORES A ARREGLOS 
+A apuntar al primer elemnto de un arreglo se puede usar la siguiente notacion 
+
+`students[0]` o bien `*students` en este caso se hace referencia al primer elemto del arreglo estudiantes 
+
+La indexación de matrices está relacionada con la desreferenciación por la siguiente equivalencia
+
+`a[i]` es equivalente con `*(a+i)`
+
+`&a[i]` es equivalente con `(a+i)`
+
+Por esta razón las variables puntero se pueden utilizar como arreglos sin embargo al usar la siguiente expresion `*(p+i)`  donde **_p_** es un **aputador** e **_i_** es un **entero** , solo tiene sentido si **p** apunta a un elemento del arreglo y **p + i** esta dentro del tamaño del arreglo.
+
+Por lo tanto si **a** es una arreglo de tamaño **n** y `p = &a[j]`, entonces `*(p + i)` esta dentro del tamaño del arreglo solo si `j + i < n`
+
 ---
+
 ## 3.INICIALIZAR APUNTADORES
 
 Todo apuntador debe inicializarse con  un valor conocido . De lo contrrio puede señalar hacia secciones de memoria totalmente arbitrarias (implica un riesgo). Este valor inicial puede corresponder con una direccion valida o , en su defecto , con un valor definido por el lenguaje, a que se conoce como **NULL**. Este ultimo es una convencion de **_C_** y significa que el apuntador aun no puede usarse.
