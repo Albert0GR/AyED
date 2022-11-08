@@ -5,16 +5,17 @@
 void mostrarPleiculas(Item item);
 char *s_gets(char *st,int n);
 
+
 int main(void){
-    Lista pelicula;
+    Lista movies;
     Item temporal;
 
 //inicializar
-    IniciaLista(&pelicula);
-    if (ListaLlena(&pelicula))
+    IniciaLista(&movies);
+    if (ListaLlena(&movies))
     {
         fprintf(stderr,"No hay memoria Adios\n");
-        exit(1);
+        //exit(1);
     }
 
 puts("ingresa un nombre de pelicula");
@@ -25,11 +26,11 @@ while (s_gets(temporal.titulo,TSIZE) !=NULL && temporal.titulo[0] !='\0')
     while (getchar()!='\n'){
        continue; 
     }        
-    if(AgregarItem(temporal,&pelicula)==false){
+    if(AgregarItem(temporal,&movies)==false){
         fprintf(stderr,"Problemaal guardar en memoria\n");
         break;
     }
-    if(ListaLlena(&pelicula)){
+    if(ListaLlena(&movies)){
         puts("ahor la lista esta llena");
         break;
     }
@@ -39,18 +40,18 @@ while (s_gets(temporal.titulo,TSIZE) !=NULL && temporal.titulo[0] !='\0')
 }
 
 //display
-    if (ListaVacia(&pelicula))
+    if (ListaVacia(&movies))
     {
         printf("no datos");
     }else{
         printf("aqui esta l lista de peliculas\n");
-        Traverse(&pelicula,mostrarPleiculas);
+        Traverse(&movies,mostrarPleiculas);
     }
-    printf("ingresaste %d peliculas.\n",ListItem(&pelicula));
+    printf("ingresaste %d peliculas.\n",ListItem(&movies));
 
 //limpiar
 
-    VaciaLista(&pelicula);
+    VaciaLista(&movies);
     printf("bye\n");
 
     return 0;    
