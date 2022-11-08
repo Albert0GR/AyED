@@ -12,13 +12,11 @@ int main(void){
 
 //inicializar
     IniciaLista(&movies);
-    if (ListaLlena(&movies))
-    {
-        fprintf(stderr,"No hay memoria Adios\n");
-        //exit(1);
-    }
 
-puts("ingresa un nombre de pelicula");
+
+for (int i = 0; i < 3; i++)
+{
+    puts("ingresa un nombre de pelicula");
 while (s_gets(temporal.titulo,TSIZE) !=NULL && temporal.titulo[0] !='\0')
 {
     puts("ingresa tu calificacion ");
@@ -38,6 +36,13 @@ while (s_gets(temporal.titulo,TSIZE) !=NULL && temporal.titulo[0] !='\0')
     puts("ingresa nuevo titulo()");
     
 }
+}
+
+/*     if (ListaLlena(&movies))
+    {
+        fprintf(stderr,"No hay memoria Adios\n");
+        exit(1);
+    } */
 
 //display
     if (ListaVacia(&movies))
