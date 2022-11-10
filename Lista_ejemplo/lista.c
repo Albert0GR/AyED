@@ -11,8 +11,9 @@ typedef tnodo *tpuntero; //Puntero al tipo de dato tnodo para no utilizar punter
 void insertarEnListaCabeza (tpuntero *cabeza, int e);
 void imprimirLista (tpuntero cabeza);
 void borrarLista (tpuntero *cabeza);
-void eliminaEnListaPosicion (tpuntero* primero, int i); 
-int NumerNodos(tpuntero *Primero);
+void eliminaEnListaPosicion (tpuntero* cabeza, int i); 
+int NumerNodos(tpuntero *cabeza);
+
 
 int main(){
     int e;
@@ -60,11 +61,11 @@ void insertarEnListaCabeza (tpuntero *cabeza, int e){
     *cabeza = nuevo; //Cabeza pasa a ser el ultimo nodo agregado
 }
  
-void eliminaEnListaPosicion (tpuntero* primero, int i){
+void eliminaEnListaPosicion (tpuntero* cabeza, int i){
     tnodo *ptr,*ant;
     int k = 0;
 
-    ptr = *primero;
+    ptr = *cabeza;
     ant = NULL;
     while ( (k < i) && (ptr != NULL))
     {
@@ -75,7 +76,7 @@ void eliminaEnListaPosicion (tpuntero* primero, int i){
     if(k == i)
     {
         if( ant == NULL)
-            *primero = ptr->sig;
+            *cabeza = ptr->sig;
         else
         ant->sig = ptr->sig;
     
@@ -99,10 +100,10 @@ void borrarLista(tpuntero *cabeza){
     }
 }
 
-int NumerNodos(tpuntero *Primero){
+int NumerNodos(tpuntero *cabeza){
 int k = 0;
 tnodo *p;
-p = *Primero;
+p = *cabeza;
 while (p != NULL)
 {
 k++;
