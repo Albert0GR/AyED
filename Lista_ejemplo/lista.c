@@ -14,10 +14,12 @@ void borrarLista (tpuntero *cabeza);
 void eliminaEnListaPosicion (tpuntero* cabeza, int i); 
 int NumerNodos(tpuntero *cabeza);
 
+tnodo* BuscarLista (tpuntero* cabeza, int dato);
+
 
 int main(){
     int e;
-    tpuntero cabeza; //Indica la cabeza de la lista enlazada, si la perdemos no podremos acceder a la lista
+    tpuntero cabeza,search; //Indica la cabeza de la lista enlazada, si la perdemos no podremos acceder a la lista
     cabeza = NULL; //Se inicializa la cabeza como NULL ya que no hay ningun nodo cargado en la lista
      
     printf("Ingrese elementos, -1 para terminar: ");
@@ -40,8 +42,15 @@ int main(){
     imprimirLista (cabeza);
     printf ("\nAl momento hay %d nodos: ",NumerNodos(&cabeza)); 
 
-
-
+    if(BuscarLista(&cabeza,4)!=NULL){
+    search=BuscarLista(&cabeza,5);
+    printf("valor encontrado %d direccion %p ,",search->valor,search);    
+    }
+    
+    else
+    printf("valor no encontrado");
+    
+    
 
     printf ("\nSe borra la lista cargada\n");
     borrarLista (&cabeza);
@@ -110,4 +119,13 @@ k++;
 p = p->sig;
 }
 return(k);
+}
+
+tnodo* BuscarLista (tpuntero* cabeza, int dato)
+{
+tnodo *ptr;
+for (ptr = *cabeza; ptr != NULL; ptr = ptr->sig)
+if ( ptr->valor == dato )
+return ptr;
+return NULL;
 }
