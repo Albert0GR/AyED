@@ -22,6 +22,7 @@ tnodo *BuscarLista (tpuntero *cabeza, int dato); //devuelve el apuntador al que 
 
 //devuelve la posicion en que se encuentra un valor o 1 en otro caso
 int buscarDato(int valor);
+tnodo *buscaNodo(int pos);
 
 
 

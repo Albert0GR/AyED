@@ -88,3 +88,14 @@ int buscarDato(int valor){
  
     
 }
+
+tnodo *buscaNodo(int pos){
+    int i=1;
+    tnodo *aux;
+    while (i<pos && aux!=NULL)
+    {
+        aux=aux->sig;
+        i++;
+    }
+    return aux;
+}

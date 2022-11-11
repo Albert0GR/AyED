@@ -31,8 +31,9 @@ int main(){
     
     else
     printf("valor no encontrado");
-    
+    //uso de las funciones vistas en clase
     printf("\nPosicion del dato %d a buscar :%d \n",r,buscarDato(r));
+    printf("\nDireccion que contiene el dato %d a buscar :%p \n",r,buscaNodo(r));
 
     printf ("\nSe borra la lista cargada\n");
     borrarLista (&cabeza);
