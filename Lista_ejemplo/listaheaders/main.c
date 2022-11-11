@@ -37,8 +37,14 @@ int main(){
     insertar(&cabeza,999);
     insertar(&cabeza,99);
     insertar(&cabeza,9);
+    insertar(&cabeza,978);
+    insertar(&cabeza,67);
+    insertar(&cabeza,4);
+    insertar(&cabeza,94);
+    insertar(&cabeza,90);
     insertar(&cabeza,91);
-    insertar(&cabeza,911);
+    insertar(&cabeza,92);
+    insertar(&cabeza,93);
 
     printf ("\nAl momento hay %d nodos: ",recorrer(&cabeza));
     int j;
