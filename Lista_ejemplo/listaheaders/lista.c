@@ -128,7 +128,7 @@ void eliminar(tpuntero* cabeza){
 
     if (pos==1)
     {
-         cabeza =objetivo->sig;
+         *cabeza =objetivo->sig;
     }else{
         previo=buscaNodo(pos-1);
         previo->sig=objetivo->sig;
