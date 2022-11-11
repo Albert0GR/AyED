@@ -32,17 +32,23 @@ int main(){
     else
     printf("valor no encontrado");
     //uso de las funciones vistas en clase
-    printf("\nPosicion del dato %d a buscar :%d \n",r,buscarDato(r));
-    printf("\nDireccion que contiene el dato %d a buscar :%p \n",r,buscaNodo(r));
+    printf("\nPosicion del dato %d a buscar :%d \n",r,buscarDato(&cabeza,r));
+    int s=buscaNodo(r)->valor;
+    printf("\nDireccion que contiene el dato %d a buscar :%p \n",s,buscaNodo(r));
     visita(cabeza);
 
     eliminar(&cabeza);
 
-    imprimirLista (cabeza);
-    printf ("\nAl momento hay %d nodos: ",NumerNodos(&cabeza));
+    visita(cabeza);
+
+<<<<<<< HEAD
+    //printf("\nSe borra la lista cargada\n");
+    //borrarLista(&cabeza);
+=======
 
     printf("\nSe borra la lista cargada\n");
     borrarLista(&cabeza);
+>>>>>>> parent of 035f654 (Merge branch 'branch2' of https://github.com/Albert0GR/AyED into branch2)
      
     printf ("\n");
     system ("PAUSE");

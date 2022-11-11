@@ -21,7 +21,7 @@ tnodo *BuscarLista (tpuntero *cabeza, int dato); //devuelve el apuntador al que 
 //funciones vistas en la clase
 
 //devuelve la posicion en que se encuentra un valor o 1 en otro caso
-int buscarDato(int valor);
+int buscarDato(tpuntero *cabeza,int valor);     
 tnodo *buscaNodo(int pos);
 void visita(tpuntero actual);         //recorrido recursivo de la lista
 void eliminar(tpuntero* cabeza);

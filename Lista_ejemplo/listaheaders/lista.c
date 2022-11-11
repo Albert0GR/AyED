@@ -71,8 +71,8 @@ tnodo* BuscarLista (tpuntero* cabeza, int dato)
 //funciones vistas en la clase
 
 //devuelve la posicion en que se encuentra un valor o 1 en otro caso
-int buscarDato(int valor){
-    tnodo *aux;
+int buscarDato(tpuntero *cabeza,int valor){
+    tnodo *aux= *cabeza;
     int posicion=1;
 
     printf("\nInicio de la busqueda\n");
@@ -123,12 +123,12 @@ void eliminar(tpuntero* cabeza){
 
     printf("\n que valor deseas eliminar: ");
     scanf("%d",&val);
-    pos=buscarDato(val);
+    pos=buscarDato(cabeza,val);
     objetivo =buscaNodo(pos);
 
     if (pos==1)
     {
-         *cabeza =objetivo->sig;
+         cabeza =objetivo->sig;
     }else{
         previo=buscaNodo(pos-1);
         previo->sig=objetivo->sig;
