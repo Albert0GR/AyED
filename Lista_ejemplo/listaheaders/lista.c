@@ -100,10 +100,12 @@ tnodo *buscaNodo(int pos){
     return aux;
 }
 
-void visita(tnodo *actual){
+void visita(tpuntero actual){
+    
+    
     if (actual!=NULL)
     {
-        printf("%d",actual->valor);
+        printf("%d ",actual->valor);
         if (actual->sig !=NULL)
         {
             visita(actual->sig);
