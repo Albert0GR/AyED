@@ -19,12 +19,12 @@ int NumerNodos(tpuntero *cabeza);
 tnodo *BuscarLista (tpuntero *cabeza, int dato); //devuelve el apuntador al que contiene el dato
 
 //funciones vistas en la clase
-
-//devuelve la posicion en que se encuentra un valor o 1 en otro caso
-int buscarDato(tpuntero *cabeza,int valor);     
-tnodo *buscaNodo(int pos);
-void visita(tpuntero actual);         //recorrido recursivo de la lista
-void eliminar(tpuntero* cabeza);
+void insertar(tpuntero *cabeza, int valor);
+int recorrer(tpuntero *cabeza);//recorre la lista y devuleve su longitud
+int buscarDato(tpuntero *cabeza,int valor);     //devuelve la posicion en que se encuentra un valor o 1 en otro caso
+tnodo *buscaNodo(tpuntero *cabeza,int pos);           //devuelve el apuntador al nodo en una posicion en particular
+void visita(tnodo *actual);         //recorrido recursivo de la lista
+void eliminar(tnodo *actual);
 
 
 #endif

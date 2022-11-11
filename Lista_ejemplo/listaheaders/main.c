@@ -1,9 +1,9 @@
 #include "funciones.h"
 int main(){
     int e;
-    tpuntero cabeza,search; //Indica la cabeza de la lista enlazada, si la perdemos no podremos acceder a la lista
-    cabeza = NULL; //Se inicializa la cabeza como NULL ya que no hay ningun nodo cargado en la lista
-     
+    tpuntero cabeza,search;          //Indica la cabeza de la lista enlazada, si la perdemos no podremos acceder a la lista
+    cabeza = NULL;                    //Se inicializa la cabeza como NULL ya que no hay ningun nodo cargado en la lista
+    /* 
     printf("Ingrese elementos, -1 para terminar: ");
     scanf("%d",&e);
      
@@ -30,28 +30,39 @@ int main(){
     }
     
     else
-    printf("valor no encontrado");
-    //uso de las funciones vistas en clase
-    printf("\nPosicion del dato %d a buscar :%d \n",r,buscarDato(&cabeza,r));
-    int s=buscaNodo(r)->valor;
-    printf("\nDireccion que contiene el dato %d a buscar :%p \n",s,buscaNodo(r));
+    printf("valor [%d]no encontrado\n",r);*/
+
+
+    //uso de las funciones vistas en clase//////////////////////////////////////////////////////7777
+    insertar(&cabeza,999);
+    insertar(&cabeza,99);
+    insertar(&cabeza,9);
+    insertar(&cabeza,91);
+    insertar(&cabeza,911);
+
+    printf ("\nAl momento hay %d nodos: ",recorrer(&cabeza));
+    int j;
+    if(j=buscarDato(&cabeza,98)==-1)
+        printf("Dato no encontrado");
+    else
+        printf("el dato esta en la posicion %d",j);
+    
+    tnodo *ps=buscaNodo(&cabeza,2);        
+    printf("\nEl dato en  la posicion 2 tiene la direccion de memoria %p\n",ps);
+    printf("\nEl dato en  la posicion 2 tiene un valor %d\n",ps->valor);
+    
     visita(cabeza);
 
-    eliminar(&cabeza);
+    eliminar(cabeza);
+
+    
 
     visita(cabeza);
 
-<<<<<<< HEAD
-    //printf("\nSe borra la lista cargada\n");
-    //borrarLista(&cabeza);
-=======
 
-    printf("\nSe borra la lista cargada\n");
-    borrarLista(&cabeza);
->>>>>>> parent of 035f654 (Merge branch 'branch2' of https://github.com/Albert0GR/AyED into branch2)
      
     printf ("\n");
-    system ("PAUSE");
+    
      
 return 0;
 }

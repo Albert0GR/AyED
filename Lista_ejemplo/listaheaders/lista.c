@@ -70,6 +70,40 @@ tnodo* BuscarLista (tpuntero* cabeza, int dato)
 
 //funciones vistas en la clase
 
+void insertar(tpuntero *cabeza, int valor){
+    tnodo *nuevo=*cabeza;
+     nuevo= malloc(sizeof(tnodo));
+     nuevo->valor= valor;
+     if(cabeza==NULL){
+        *cabeza=nuevo;
+        nuevo->sig=NULL;
+     }else{
+        nuevo->sig=*cabeza;
+        *cabeza=nuevo;
+     }
+
+}
+
+//devuelve la longitud de la lista 
+int recorrer(tpuntero *cabeza){
+    tnodo *aux=*cabeza;
+    int longitud =0;
+
+    printf("\ninicio del recorrido\n");
+    if(aux != NULL){
+        while (aux->sig != NULL)
+        {
+            printf("%d ",aux->valor);
+            aux=aux->sig;
+            longitud++;
+        }
+        longitud++;
+        printf("%d",aux->valor);
+        
+    }
+    return longitud;
+}
+
 //devuelve la posicion en que se encuentra un valor o 1 en otro caso
 int buscarDato(tpuntero *cabeza,int valor){
     tnodo *aux= *cabeza;
@@ -80,18 +114,18 @@ int buscarDato(tpuntero *cabeza,int valor){
     {
         aux= aux->sig;
         posicion++;
-    }
+    };
     if (aux!=NULL)
         return posicion;
     else
-    return 1;
+    return -1;
  
     
 }
 
-tnodo *buscaNodo(int pos){
+tnodo *buscaNodo(tpuntero *cabeza,int pos){
     int i=1;
-    tnodo *aux;
+    tnodo *aux=*cabeza;
     while (i<pos && aux!=NULL)
     {
         aux=aux->sig;
@@ -100,8 +134,7 @@ tnodo *buscaNodo(int pos){
     return aux;
 }
 
-void visita(tpuntero actual){
-    
+void visita(tnodo *actual){
     
     if (actual!=NULL)
     {
@@ -116,21 +149,21 @@ void visita(tpuntero actual){
     
 }
 
-void eliminar(tpuntero* cabeza){
+void eliminar(tnodo *actual){
     int val,pos;
     tnodo *objetivo,*previo;
     
 
     printf("\n que valor deseas eliminar: ");
     scanf("%d",&val);
-    pos=buscarDato(cabeza,val);
-    objetivo =buscaNodo(pos);
+    pos=buscarDato(&actual,val);
+    objetivo =buscaNodo(&actual,pos);
 
     if (pos==1)
     {
-         cabeza =objetivo->sig;
+         actual =objetivo->sig;
     }else{
-        previo=buscaNodo(pos-1);
+        previo=buscaNodo(&actual,pos-1);
         previo->sig=objetivo->sig;
     }
     free(objetivo);
