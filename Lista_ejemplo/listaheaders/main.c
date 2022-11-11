@@ -38,6 +38,11 @@ int main(){
 
     printf("\nSe borra la lista cargada\n");
     borrarLista(&cabeza);
+    eliminar(&cabeza);
+    imprimirLista (cabeza);
+    printf ("\nAl momento hay %d nodos: ",NumerNodos(&cabeza));
+
+
      
     printf ("\n");
     system ("PAUSE");

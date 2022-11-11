@@ -24,7 +24,7 @@ tnodo *BuscarLista (tpuntero *cabeza, int dato); //devuelve el apuntador al que 
 int buscarDato(int valor);
 tnodo *buscaNodo(int pos);
 void visita(tpuntero actual);         //recorrido recursivo de la lista
-
+void eliminar(tpuntero* cabeza);
 
 
 #endif

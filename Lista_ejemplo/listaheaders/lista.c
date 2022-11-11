@@ -115,3 +115,24 @@ void visita(tpuntero actual){
     }
     
 }
+
+void eliminar(tpuntero* cabeza){
+    int val,pos;
+    tnodo *objetivo,*previo;
+    
+
+    printf("\n que valor deseas eliminar: ");
+    scanf("%d",&val);
+    pos=buscarDato(val);
+    objetivo =buscaNodo(pos);
+
+    if (pos==1)
+    {
+         cabeza =objetivo->sig;
+    }else{
+        previo=buscaNodo(pos-1);
+        previo->sig=objetivo->sig;
+    }
+    free(objetivo);
+    
+}
