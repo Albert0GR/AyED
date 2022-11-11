@@ -34,6 +34,7 @@ int main(){
     //uso de las funciones vistas en clase
     printf("\nPosicion del dato %d a buscar :%d \n",r,buscarDato(r));
     printf("\nDireccion que contiene el dato %d a buscar :%p \n",r,buscaNodo(r));
+    visita(&cabeza);
 
     printf ("\nSe borra la lista cargada\n");
     borrarLista (&cabeza);

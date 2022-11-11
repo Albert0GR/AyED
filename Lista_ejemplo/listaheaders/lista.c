@@ -99,3 +99,17 @@ tnodo *buscaNodo(int pos){
     }
     return aux;
 }
+
+void visita(tnodo *actual){
+    if (actual!=NULL)
+    {
+        printf("%d",actual->valor);
+        if (actual->sig !=NULL)
+        {
+            visita(actual->sig);
+            printf("%d ",actual->valor);
+        }
+        
+    }
+    
+}
