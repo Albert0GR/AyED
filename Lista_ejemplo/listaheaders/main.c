@@ -14,7 +14,7 @@ int main(){
         printf("Ingrese elementos, -1 para terminar: ");
         scanf("%d",&e);
     }
-    int r=6;
+    int r=3;
     printf ("\nAl momento hay %d nodos: ",NumerNodos(&cabeza)); 
     printf ("\nSe imprime la lista cargada: ");
     imprimirLista (cabeza);
@@ -32,7 +32,7 @@ int main(){
     else
     printf("valor no encontrado");
     
-    
+    printf("\nPosicion del dato %d a buscar :%d \n",r,buscarDato(r));
 
     printf ("\nSe borra la lista cargada\n");
     borrarLista (&cabeza);

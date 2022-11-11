@@ -16,7 +16,13 @@ void imprimirLista (tpuntero cabeza);
 void borrarLista (tpuntero *cabeza);
 void eliminaEnListaPosicion (tpuntero* cabeza, int i); 
 int NumerNodos(tpuntero *cabeza);
+tnodo *BuscarLista (tpuntero *cabeza, int dato); //devuelve el apuntador al que contiene el dato
 
-tnodo* BuscarLista (tpuntero* cabeza, int dato);
+//funciones vistas en la clase
+
+//devuelve la posicion en que se encuentra un valor o 1 en otro caso
+int buscarDato(int valor);
+
+
 
 #endif

@@ -47,22 +47,44 @@ void borrarLista(tpuntero *cabeza){
 }
 
 int NumerNodos(tpuntero *cabeza){
-int k = 0;
-tnodo *p;
-p = *cabeza;
-while (p != NULL)
-{
-k++;
-p = p->sig;
-}
-return(k);
-}
+    int k = 0;
+    tnodo *p;
+    p = *cabeza;
+
+    while (p != NULL){
+        k++;
+        p = p->sig;
+        }
+        return(k);
+    }
 
 tnodo* BuscarLista (tpuntero* cabeza, int dato)
 {
-tnodo *ptr;
-for (ptr = *cabeza; ptr != NULL; ptr = ptr->sig)
-if ( ptr->valor == dato )
-return ptr;
-return NULL;
+    tnodo *ptr;
+
+    for (ptr = *cabeza; ptr != NULL; ptr = ptr->sig)
+    if ( ptr->valor == dato )
+    return ptr;
+    return NULL;
+}
+
+//funciones vistas en la clase
+
+//devuelve la posicion en que se encuentra un valor o 1 en otro caso
+int buscarDato(int valor){
+    tnodo *aux;
+    int posicion=1;
+
+    printf("\nInicio de la busqueda\n");
+    while ((aux!=NULL)&&(aux->valor!=valor))
+    {
+        aux= aux->sig;
+        posicion++;
+    }
+    if (aux!=NULL)
+        return posicion;
+    else
+    return -1;
+ 
+    
 }
