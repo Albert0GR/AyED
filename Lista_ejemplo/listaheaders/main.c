@@ -39,7 +39,7 @@ int main(){
     insertar(&cabeza,9);
     insertar(&cabeza,91);
     insertar(&cabeza,911);
-
+    
     printf ("\nAl momento hay %d nodos: ",recorrer(&cabeza));
     int j;
     if(j=buscarDato(&cabeza,98)==-1)

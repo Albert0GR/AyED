@@ -70,6 +70,7 @@ tnodo* BuscarLista (tpuntero* cabeza, int dato)
 
 //funciones vistas en la clase
 
+//inserta al inicio de la lista 
 void insertar(tpuntero *cabeza, int valor){
     tnodo *nuevo=*cabeza;
      nuevo= malloc(sizeof(tnodo));

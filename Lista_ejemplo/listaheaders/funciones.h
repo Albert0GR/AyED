@@ -27,4 +27,4 @@ void visita(tnodo *actual);         //recorrido recursivo de la lista
 void eliminar(tnodo *actual);
 
 
-#endif
+#endif  
