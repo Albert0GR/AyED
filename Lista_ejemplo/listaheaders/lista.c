@@ -84,7 +84,7 @@ int buscarDato(int valor){
     if (aux!=NULL)
         return posicion;
     else
-    return -1;
+    return 1;
  
     
 }
@@ -109,7 +109,7 @@ void visita(tpuntero actual){
         if (actual->sig !=NULL)
         {
             visita(actual->sig);
-            printf("%d ",actual->valor);
+            //printf("%d ",actual->valor);
         }
         
     }

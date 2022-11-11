@@ -38,6 +38,7 @@ int main(){
 
     
     eliminar(&cabeza);
+    
     imprimirLista (cabeza);
     printf ("\nAl momento hay %d nodos: ",NumerNodos(&cabeza));
 
