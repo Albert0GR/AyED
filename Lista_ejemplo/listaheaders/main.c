@@ -36,14 +36,14 @@ int main(){
     printf("\nDireccion que contiene el dato %d a buscar :%p \n",r,buscaNodo(r));
     visita(cabeza);
 
-    printf("\nSe borra la lista cargada\n");
-    borrarLista(&cabeza);
     eliminar(&cabeza);
-    
+
     imprimirLista (cabeza);
     printf ("\nAl momento hay %d nodos: ",NumerNodos(&cabeza));
 
 
+    printf("\nSe borra la lista cargada\n");
+    borrarLista(&cabeza);
      
     printf ("\n");
     system ("PAUSE");
