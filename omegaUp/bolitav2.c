@@ -8,8 +8,7 @@ int bolita=0,n=0,mov=0;
 void func(int mov){ 
     switch(mov){
         case 1:
-        if(bolita=arr[0][mov-1]){bolita=arr[1][mov-1];
-                 
+        if(bolita=arr[0][mov-1]){bolita=arr[1][mov-1];                 
              }else{
                  (bolita=arr[1][mov-1]);bolita=arr[0][mov-1];}
             //printf("\nvalor  de bolita :%d movimiento %d",bolita,mov);
