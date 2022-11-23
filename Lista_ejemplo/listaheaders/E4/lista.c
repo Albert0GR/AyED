@@ -70,10 +70,11 @@ tnodo* BuscarLista (tpuntero* cabeza, int dato)
 
 //funciones vistas en la clase
 
-void insertar(tpuntero *cabeza, int valor){
+void insertar(tpuntero *cabeza, int valor,float venta){
     tnodo *nuevo=*cabeza;
      nuevo= malloc(sizeof(tnodo));
      nuevo->valor= valor;
+     nuevo->venta=venta;
      if(cabeza==NULL){
         *cabeza=nuevo;
         nuevo->sig=NULL;
@@ -93,7 +94,7 @@ int recorrer(tpuntero *cabeza){
     if(aux != NULL){
         while (aux->sig != NULL)
         {
-            printf("%d ",aux->valor);
+            printf("%d:%f ",aux->valor,aux->venta);
             aux=aux->sig;
             longitud++;
         }

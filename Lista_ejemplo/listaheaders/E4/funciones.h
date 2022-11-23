@@ -6,6 +6,11 @@
  
 typedef struct snodo{       //snodo es el nombre de la estructura
     int valor;
+    char nombre[30];
+    char fecha[30];
+    int existencia;
+    float precio;
+    float venta;
     struct snodo *sig;      //El puntero siguiente para recorrer la lista enlazada
 }tnodo;                     //tnodo es el tipo de dato para declarar la estructura
 
@@ -28,7 +33,7 @@ int NumerNodos(tpuntero *cabeza);
 tnodo *BuscarLista (tpuntero *cabeza, int dato); //devuelve el apuntador al que contiene el dato
 
 //funciones vistas en la clase
-void insertar(tpuntero *cabeza, int valor);
+void insertar(tpuntero *cabeza, int valor,float venta);
 void insertar2(tpuntero2 *cabeza, int valor);
 int recorrer(tpuntero *cabeza);                  //recorre la lista y devuleve su longitud
 int buscarDato(tpuntero *cabeza,int valor);     //devuelve la posicion en que se encuentra un valor o 1 en otro caso
