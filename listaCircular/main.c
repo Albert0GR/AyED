@@ -34,7 +34,7 @@ int main(){
     //{
        printf("\n%d ", element(&list,1));
 
-       int r = remove(&list,1);
+       //int r = remove(&list,1);
 
        printf("\n%d ", element(&list,1));
     //}
