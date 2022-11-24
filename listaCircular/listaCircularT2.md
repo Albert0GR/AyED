@@ -1,3 +1,17 @@
+>Alberto Gutierrez Romero
+> 2213027799
+
+## Tarea 2 Lista circular estatica: 
+> 
+
+## RESULTADO DE EJECUCION 
+![image](/listaCircular/img1.png)   
+
+
+**REFERENCIA AL CODIGO** [Programa Lista Circular](listaCircularT1.c)
+### Código:
+
+```c
 #include<stdio.h>
 
 #define SIZE 7
@@ -43,9 +57,7 @@ int main(){
     remov(5);
     imprime();
     remov(1);
-    imprime();
-    insert(55);
-    imprime();
+
 
 
 
@@ -123,3 +135,4 @@ int remov(int i){
         return 0;
     }
 }
+```
