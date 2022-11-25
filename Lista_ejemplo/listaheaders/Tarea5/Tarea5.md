@@ -1,4 +1,4 @@
-## Ejercicio Operaciones de una LLS
+## Ejercicio Operaciones de una LDL
 
 ### Descripcion
 
