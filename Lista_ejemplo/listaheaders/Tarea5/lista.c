@@ -1,5 +1,5 @@
 
-#include "funciones.h"232
+#include "funciones.h"
 
 //funciones vistas en la clase
 

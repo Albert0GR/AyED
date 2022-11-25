@@ -123,47 +123,43 @@ return 0;
 
 
 ```c
+
 #include "funciones.h"
 
 //funciones vistas en la clase
 
+// funcion que inserta al principio
 void insertar(tpuntero *cabeza, int valor){
-    tnodo *nuevo=*cabeza;
-     nuevo= malloc(sizeof(tnodo));
+    tnodo *nuevo;
+     nuevo= (tnodo*)malloc(sizeof(tnodo));
      nuevo->valor= valor;
-     if(cabeza==NULL){
-        *cabeza=nuevo;
-        nuevo->sig=NULL;
-     }else{
-        nuevo->sig=*cabeza;
-        *cabeza=nuevo;
-     }
+     nuevo->sig= *cabeza;
+     nuevo->ant= NULL;
+    if (*cabeza==NULL)
+    *cabeza=nuevo;
+    else
+    (*cabeza)->ant=nuevo;
+    *cabeza=nuevo;
+
+}
+// funcion que inserta antes
+void insertarAntes(tpuntero *cabeza, int valor){
+
+    tnodo *nuevo, *sig;
+
+    nuevo= (tnodo*)malloc(sizeof(tnodo));
+    nuevo->valor= valor;
+    nuevo->ant=*cabeza;
+    nuevo->sig=(*cabeza)->sig;
+    sig=nuevo->sig;
+
+    if(sig !=NULL)
+        sig->ant=nuevo;
+    nuevo->sig=nuevo;
 
 }
 
-void insertarfin(tpuntero *cabeza, int valor){
-    tnodo *nuevo=*cabeza;
-     nuevo= malloc(sizeof(tnodo));
-     nuevo->valor= valor;
-    tnodo *anterior=*cabeza;
-    tnodo *actual=*cabeza;
-     if(cabeza==NULL){
-        *cabeza=nuevo;
-        nuevo->sig=NULL;
-     }else{
-        anterior=NULL;
-        actual = *cabeza;
-        while (actual != NULL)
-        {
-            anterior=actual;
-            actual=actual->sig;
-        }
-        (*cabeza)->sig=nuevo;
-        nuevo->sig=NULL;
-        
-     }
 
-}
 
 //devuelve la longitud de la lista 
 int recorrer(tpuntero *cabeza){

@@ -16,7 +16,7 @@ typedef tnodo *tpuntero;    //Puntero al tipo de dato tnodo para no utilizar pun
 
 
 //funciones vistas en la clase
-void insertarAntes(tpuntero *cabeza, int valor);
+
 void insertar(tpuntero *cabeza, int valor);         //inserta al principio
 int recorrer(tpuntero *cabeza);                  //recorre la lista y devuleve su longitud
 int buscarDato(tpuntero *cabeza,int valor);     //devuelve la posicion en que se encuentra un valor o 1 en otro caso
