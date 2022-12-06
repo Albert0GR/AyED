@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "funciones.h": "c"
+        "funciones.h": "c",
+        "ordenamiento.h": "c"
     }
 }
