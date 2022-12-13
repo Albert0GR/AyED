@@ -4,7 +4,7 @@
 
 #include "funcionesOrdenamiento.h"
 
-#define tmax 100000
+#define tmax 1000
 int a[tmax];
   clock_t comienzo;
 
@@ -12,11 +12,11 @@ int a[tmax];
 int main(){
     printf("|\nBURBUJA|\n");
     aleatorio(a,tmax);
-    //imprimir(tmax,a);
+    imprimir(tmax,a);
     comienzo=clock();
     burbuja(tmax,a);
     printf( "Número de segundos transcurridos desde el comienzo del programa: %f s\n", (clock()-comienzo)/(double)CLOCKS_PER_SEC );
-    //imprimir(tmax,a);
+    imprimir(tmax,a);
 
     printf("|\nSELECCION|\n");
     aleatorio(a,tmax);
